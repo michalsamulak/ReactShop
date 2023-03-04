@@ -1,5 +1,5 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react';
+
+import { SingleItem } from '../components/SingleItem';
 import { useFetch } from '../hooks/useFetch';
 import {
     Button,
@@ -14,88 +14,19 @@ import {
 
 export const Home = () => {
     const {data, loading} = useFetch('products')
-      
 
+    if(!data) throw new Error('Try again...')
+
+    const renderProduts = () => {
+      data.map(product=> {
+        
+      })
+    }
+  
 
     return (
         <HomeWrapper>
-            <Card>
-                {/* <img src="" alt="" /> */}
-                <Title>Title</Title>
-                <Description>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis accusamus suscipit eos veniam esse, dolor iste
-                    sint, quisquam natus repellat placeat, vel maiores. Neque
-                    magnam at veniam incidunt delectus dignissimos?
-                </Description>
-                <Value>
-                    <Price>$5.55</Price>
-                    <Button>Buy</Button>
-                </Value>
-            </Card>
-
-
-
-
-            <Card>
-                {/* <img src="" alt="" /> */}
-                <Title>Title</Title>
-                <Description>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis accusamus suscipit eos veniam esse, dolor iste
-                    sint, quisquam natus repellat placeat, vel maiores. Neque
-                    magnam at veniam incidunt delectus dignissimos?
-                </Description>
-                <Value>
-                    <Price>$5.55</Price>
-                    <Button>Buy</Button>
-                </Value>
-            </Card>
-
-            <Card>
-                {/* <img src="" alt="" /> */}
-                <Title>Title</Title>
-                <Description>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis accusamus suscipit eos veniam esse, dolor iste
-                    sint, quisquam natus repellat placeat, vel maiores. Neque
-                    magnam at veniam incidunt delectus dignissimos?
-                </Description>
-                <Value>
-                    <Price>$5.55</Price>
-                    <Button>Buy</Button>
-                </Value>
-            </Card>
-
-            <Card>
-                {/* <img src="" alt="" /> */}
-                <Title>Title</Title>
-                <Description>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis accusamus suscipit eos veniam esse, dolor iste
-                    sint, quisquam natus repellat placeat, vel maiores. Neque
-                    magnam at veniam incidunt delectus dignissimos?
-                </Description>
-                <Value>
-                    <Price>$5.55</Price>
-                    <Button>Buy</Button>
-                </Value>
-            </Card>
-
-            <Card>
-                {/* <img src="" alt="" /> */}
-                <Title>Title</Title>
-                <Description>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis accusamus suscipit eos veniam esse, dolor iste
-                    sint, quisquam natus repellat placeat, vel maiores. Neque
-                    magnam at veniam incidunt delectus dignissimos?
-                </Description>
-                <Value>
-                    <Price>$5.55</Price>
-                    <Button>Buy</Button>
-                </Value>
-            </Card>
+          {!loading ? <SingleItem/> : <span className="loader"></span>}
         </HomeWrapper>
     );
 };
