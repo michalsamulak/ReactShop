@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contact } from "./pages/Contact";
 import { Product } from "./pages/Product";
+import { Container } from "./style/Cotainer";
 
 
 
@@ -14,14 +15,14 @@ function App() {
     return (
         <>
             <Navigation />
-            <div>
+            <Container>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Product" element={<Product />} />
                 <Route path="/Categories" element={<Categories />} />
                 <Route path="/Contact" element={<Contact />} />
                 </Routes>
-            </div>
+            </Container>
         </>
     );
 }
