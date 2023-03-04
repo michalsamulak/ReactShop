@@ -1,6 +1,5 @@
-
-import { SingleItem } from '../components/SingleItem';
-import { useFetch } from '../hooks/useFetch';
+import { SingleItem } from "../components/SingleItem";
+import { useFetch } from "../hooks/useFetch";
 import {
     Button,
     Card,
@@ -11,22 +10,31 @@ import {
     Value,
 } from "../style/Home";
 
-
 export const Home = () => {
-    const {data, loading} = useFetch('products')
-
-    if(!data) throw new Error('Try again...')
-
-    const renderProduts = () => {
-      data.map(product=> {
-        
-      })
-    }
-  
+    const { data, loading } = useFetch("products");
 
     return (
         <HomeWrapper>
-          {!loading ? <SingleItem/> : <span className="loader"></span>}
+            <>
+                {loading ? (
+                    <span className="loader"></span>
+                ) : (
+                    data?.map((product) => {
+                        return (<SingleItem key={product.id} product={product}/>);
+                    })
+                )}
+            </>
         </HomeWrapper>
     );
+
+  //   return (
+  //     <HomeWrapper>
+  //         <>
+  //             { data?.map((product) => { 
+  //                     return (<SingleItem product={product}/>);
+  //                 })}
+              
+  //         </>
+  //     </HomeWrapper>
+  // );
 };

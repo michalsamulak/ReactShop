@@ -24,7 +24,8 @@ export const Card = styled.div`
 export const Title = styled.h5`
     text-transform: uppercase;
     color: #252525;
-    font-size: 20px;
+    font-size: 16px;
+    padding: 5px;
     border-bottom: 1px solid #252525;
 `
 

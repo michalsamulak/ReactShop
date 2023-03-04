@@ -4,7 +4,7 @@ import { IProductsArray } from '../types';
 
 export const useFetch = (url: string) => {
     const [loading, setLoading] = useState(false)
-  const [data, setData] = useState<IProductsArray[]>()
+  const [data, setData] = useState<IProductsArray>()
 
   useEffect(()=> {
     setLoading(true)
