@@ -14,7 +14,7 @@ function App() {
             <Container>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/Product" element={<Product />} />
+                    <Route path="/Product/:productId" element={<Product />} />
                     <Route path="/Categories" element={<Categories />} />
                     <Route path="/Contact" element={<Contact />} />
                 </Routes>
