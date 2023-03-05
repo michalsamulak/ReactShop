@@ -10,7 +10,7 @@ export const Navigation = () => {
                 Home
             </Link>
             <Link className="link" to="Categories">
-                Categoies
+                Categories
             </Link>
             <Link className="link" to="Product">
                 Product
