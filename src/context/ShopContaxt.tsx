@@ -11,7 +11,7 @@ export type ICartActions = {
     remove: (id: number) => void;
     dropFromBasket: (id: number) => void;
     getQuantity: (id: number) => number;
-    basket: ICartProduct[];
+    cartProducts: ICartProduct[];
 };
 
 const ShopContext = createContext({} as ICartActions);
@@ -25,20 +25,22 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
     const add = (id: number) => {
         setCartProducts((prevCart) => {
-            const isProductInCart = prevCart.findIndex(
+            const productFromCart = prevCart.findIndex(
                 (product) => product.id === id
             );
-            if (isProductInCart) {
-                return prevCart.map((product) => {
-                    //why cant use ternary operator
-                    // product.id === id ? { ...product, quantity: product.quantity + 1 } : product
+            if (productFromCart) {
+                return prevCart.map(
+                    (product) =>
+                        product.id === id
+                            ? { ...product, quantity: product.quantity + 1 }
+                            : product
 
-                    if (product.id === id) {
-                        return { ...product, quantity: product.quantity + 1 };
-                    } else {
-                        return product;
-                    }
-                });
+                    // if (product.id === id) {
+                    //     return { ...product, quantity: product.quantity + 1 };
+                    // } else {
+                    //     return product;
+                    // }
+                );
             }
 
             return [...prevCart, { id, quantity: 1 }];
@@ -47,18 +49,21 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
     const remove = (id: number) => {
         setCartProducts((prevCart) => {
-            const isProductInCart = prevCart.find(
+            const productFromCart = prevCart.find(
                 (product) => product.id === id
             );
-            if (isProductInCart && isProductInCart.quantity === 1)
+            if (productFromCart && productFromCart.quantity === 1)
                 return prevCart.filter((product) => product.id !== id);
 
             return prevCart.map((product) => {
-                if (product.id === id) {
-                    return { ...product, quantity: product.quantity - 1 };
-                } else {
-                    return product;
-                }
+                return product.id === id
+                    ? { ...product, quantity: product.quantity - 1 }
+                    : product;
+                // if (product.id === id) {
+                //     return { ...product, quantity: product.quantity - 1 };
+                // } else {
+                //     return product;
+                // }
             });
         });
     };
@@ -69,7 +74,12 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         });
     };
 
-    const getQuantity = () => {};
+    const getQuantity = (id: number) => {
+        const productFromCart = cartProducts.find(
+            (product) => product.id === id
+        );
+        return productFromCart !== undefined ? productFromCart.quantity : null;
+    };
 
     return <ShopContext.Provider value={{}}>{children}</ShopContext.Provider>;
 };
