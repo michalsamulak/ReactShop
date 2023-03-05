@@ -43,8 +43,12 @@ export const ShopProvider = ({children}: IContextChildren) => {
     
   }
 
-  const dropFromBasket = () => {
-    
+  const dropFromBasket = (id: number) => {
+      setCartProducts(
+        prevCart => {
+          return prevCart.filter(product => product.id !== id)
+        }
+      )
   }
 
   const getQuantity = () => {
