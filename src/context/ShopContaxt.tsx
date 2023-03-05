@@ -25,9 +25,10 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
     const add = (id: number) => {
         setCartProducts((prevCart) => {
-            const productFromCart = prevCart.findIndex(
+            const productFromCart = prevCart.find(
                 (product) => product.id === id
             );
+
             if (productFromCart) {
                 return prevCart.map(
                     (product) =>
@@ -82,12 +83,16 @@ export const ShopProvider = ({ children }: IContextChildren) => {
     };
 
     const providerValues = {
-      add,
-      remove,
-      dropFromBasket,
-      getQuantity,
-      cartProducts
-    }
+        add,
+        remove,
+        dropFromBasket,
+        getQuantity,
+        cartProducts,
+    };
 
-    return <ShopContext.Provider value={providerValues}>{children}</ShopContext.Provider>;
+    return (
+        <ShopContext.Provider value={providerValues}>
+            {children}
+        </ShopContext.Provider>
+    );
 };
