@@ -17,7 +17,7 @@ export const useFetch = (url: string) => {
             
           setData(Object.values(data))
         })
-        .catch(err => console.dir(err))
+        .catch(err => console.error(err))
         .finally(() => setLoading(false))
       },[])
   

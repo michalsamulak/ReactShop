@@ -7,7 +7,7 @@ export const HomeWrapper = styled.div`
 `
 
 export const Card = styled.div`
-    background-color: bisque;
+    background-color: #ffe8cd40;
 
     display: flex;
     flex-direction: column;
@@ -17,8 +17,10 @@ export const Card = styled.div`
 
 
     width: 250px;
-    height: 400px;
+    height: 500px;
     margin: 15px;
+
+    box-shadow: 2px 2px 2px #252525;
 `
 
 export const Title = styled.h5`
@@ -31,6 +33,12 @@ export const Title = styled.h5`
 
 export const Description = styled.span`
     padding: 15px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     margin-top: 10px;
+     margin-bottom: 10px;
 `
 
 export const Value = styled.div`
@@ -72,3 +80,9 @@ export const Button = styled.button`
 }
 `
 
+export const Picture = styled.img`
+        width: 90%;
+        min-height: 200px;
+    max-height: 300px;
+    margin: 5px;
+`

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Description, Price, Title, Value } from "../style/Home";
+import { Button, Card, Description, Picture, Price, Title, Value } from "../style/Home";
 import { ISingleProduct } from "../types";
 
 export const SingleItem = ({ product }: { product: ISingleProduct }) => {
@@ -8,6 +8,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
     return (
         <Card >
             {/* <img src="" alt="" /> */}
+            <Picture src={product.image}/>
             <Title>{title}</Title>
             <Description>{description}</Description>
             <Value>
