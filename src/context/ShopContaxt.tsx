@@ -78,8 +78,16 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         const productFromCart = cartProducts.find(
             (product) => product.id === id
         );
-        return productFromCart !== undefined ? productFromCart.quantity : null;
+        return productFromCart !== undefined ? productFromCart.quantity : 0;
     };
 
-    return <ShopContext.Provider value={{}}>{children}</ShopContext.Provider>;
+    const providerValues = {
+      add,
+      remove,
+      dropFromBasket,
+      getQuantity,
+      cartProducts
+    }
+
+    return <ShopContext.Provider value={providerValues}>{children}</ShopContext.Provider>;
 };
