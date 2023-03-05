@@ -9,9 +9,10 @@ import {
     Title,
     Value,
 } from "../style/Home";
+import { IProductsArray, ISingleProduct } from "../types";
 
 export const Home = () => {
-    const { data, loading } = useFetch("products");
+    const { data, loading } = useFetch<IProductsArray>("products");
 
     return (
         <HomeWrapper>
@@ -19,7 +20,7 @@ export const Home = () => {
                 {loading ? (
                     <span className="loader"></span>
                 ) : (
-                    data?.map((product) => {
+                    data?.map((product: ISingleProduct) => {
                         return (<SingleItem key={product.id} product={product}/>);
                     })
                 )}
