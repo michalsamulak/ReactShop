@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export { }
 
 export type ISingleProduct = {
@@ -15,3 +17,7 @@ export type ISingleProduct = {
 }
 
 export type IProductsArray = ISingleProduct[] 
+
+export type IContextChildren = {
+    children: ReactNode
+}
