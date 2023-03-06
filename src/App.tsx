@@ -4,7 +4,7 @@ import { Home } from "./pages/Home";
 import { Categories } from "./pages/Categories";
 import { Contact } from "./pages/Contact";
 import { Product } from "./pages/Product";
-import { Container } from "./style/Cotainer";
+import { Container } from "./style/Cotainer.style";
 import { ShopProvider } from "./context/ShopContaxt";
 
 function App() {

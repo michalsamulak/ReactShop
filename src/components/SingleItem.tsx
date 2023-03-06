@@ -9,7 +9,7 @@ import {
     Price,
     Title,
     Value,
-} from "../style/Home";
+} from "../style/Home.style";
 import { ISingleProduct } from "../types";
 
 export const SingleItem = ({ product }: { product: ISingleProduct }) => {

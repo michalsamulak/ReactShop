@@ -8,7 +8,7 @@ import {
     Price,
     Title,
     Value,
-} from "../style/Home";
+} from "../style/Home.style";
 import { IProductsArray, ISingleProduct } from "../types";
 
 export const Home = () => {
