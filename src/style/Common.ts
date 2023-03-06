@@ -6,3 +6,8 @@ export const Container = styled.div`
     padding: 10px;
     margin-left: 100px;
 `
+export const Error = styled.div`
+color: red;
+font-size: 36px;
+font-weight: bold;
+`

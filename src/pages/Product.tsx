@@ -1,16 +1,24 @@
 import { useParams } from "react-router-dom";
 import { useShop } from "../context/ShopContaxt";
 import { useFetchOnInit } from "../hooks/useFetchOnInit";
-import { Container } from "../style/Cotainer.style";
+import { Container, Error } from "../style/Common";
 import { Box, BoxImg, Details, PriceWrapper, ProductDescr, ProductPrice, ProductRate, ProductTitle } from "../style/Product.style";
 import { ISingleProduct } from "../types";
 import { apiPaths } from "../utils/utils";
 
+
 export const Product = () => {
     // const { add, getQuantity, cartProducts } = useShop();
     const { productId } = useParams();
-    const { data, loading } = useFetchOnInit<ISingleProduct>(`${apiPaths.products}/${productId}`); 
+    const { data, loading, error } = useFetchOnInit<ISingleProduct>(`${apiPaths.products}/${productId}`); 
 
+    if (error) {
+        return (
+            <Box>
+                <Error>{error.message}</Error>
+            </Box>
+        );
+    }
 
     return (
         <>

@@ -6,7 +6,7 @@ import { apiPaths } from '../utils/utils';
 export const useFetchOnInit = <T>(url: string) => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState<T | null>(null)
-
+  const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
     setLoading(true)
@@ -18,13 +18,15 @@ export const useFetchOnInit = <T>(url: string) => {
       .then(({ data }) => {
         if (data === null) throw new Error('no data')
         setData(data)
-        // setData(Object.values(data))
       })
-      .catch(err => console.error(err))
+      .catch(err => {
+        setError(err)
+      }
+      )
       .finally(() => setLoading(false))
   }, [])
 
-  return { data, loading }
+  return { data, loading, error }
 
 
 
