@@ -1,15 +1,12 @@
-import axios from "axios";
-import React from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useShop } from "../context/ShopContaxt";
 import { useFetch } from "../hooks/useFetch";
 import { Container } from "../style/Cotainer.style";
-import { HomeWrapper } from "../style/Home.style";
 import { Box, BoxImg, Details, PriceWrapper, ProductDescr, ProductPrice, ProductRate, ProductTitle } from "../style/Product.style";
 import { ISingleProduct } from "../types";
 
 export const Product = () => {
-    const { add, getQuantity, cartProducts } = useShop();
+    // const { add, getQuantity, cartProducts } = useShop();
     const { productId } = useParams();
     const { data, loading } = useFetch<ISingleProduct>(`products/${productId}`);
 

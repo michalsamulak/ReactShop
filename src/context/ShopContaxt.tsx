@@ -30,17 +30,10 @@ export const ShopProvider = ({ children }: IContextChildren) => {
             );
 
             if (productFromCart) {
-                return prevCart.map(
-                    (product) =>
-                        product.id === id
-                            ? { ...product, quantity: product.quantity + 1 }
-                            : product
-
-                    // if (product.id === id) {
-                    //     return { ...product, quantity: product.quantity + 1 };
-                    // } else {
-                    //     return product;
-                    // }
+                return prevCart.map((product) =>
+                    product.id === id
+                        ? { ...product, quantity: product.quantity + 1 }
+                        : product
                 );
             }
 
@@ -60,11 +53,6 @@ export const ShopProvider = ({ children }: IContextChildren) => {
                 return product.id === id
                     ? { ...product, quantity: product.quantity - 1 }
                     : product;
-                // if (product.id === id) {
-                //     return { ...product, quantity: product.quantity - 1 };
-                // } else {
-                //     return product;
-                // }
             });
         });
     };

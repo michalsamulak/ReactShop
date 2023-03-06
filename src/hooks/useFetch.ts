@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { IProductsArray } from '../types';
 
 export const useFetch = <T>(url: string) => {
     const [loading, setLoading] = useState(false)
