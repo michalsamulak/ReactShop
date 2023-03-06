@@ -8,8 +8,8 @@ export type ICartProduct = {
 
 export type ICartActions = {
     add: (id: number) => void;
+    decrice: (id: number) => void;
     remove: (id: number) => void;
-    dropFromBasket: (id: number) => void;
     getQuantity: (id: number) => number;
     cartProducts: ICartProduct[];
 };
@@ -45,7 +45,7 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         });
     };
 
-    const remove = (id: number) => {
+    const decrice = (id: number) => {
         setCartProducts((prevCart) => {
             const productFromCart = prevCart.find(
                 (product) => product.id === id
@@ -61,7 +61,7 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         });
     };
 
-    const dropFromBasket = (id: number) => {
+    const remove = (id: number) => {
         setCartProducts((prevCart) => {
             return prevCart.filter((product) => product.id !== id);
         });
@@ -76,8 +76,8 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
     const providerValues = {
         add,
+        decrice,
         remove,
-        dropFromBasket,
         getQuantity,
         cartProducts,
     };

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { apiPaths } from '../utils/utils';
 
-// useFetchOnInit
-export const useFetch = <T>(url: string) => {
+
+export const useFetchOnInit = <T>(url: string) => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState<T | null>(null)
 
@@ -11,7 +12,7 @@ export const useFetch = <T>(url: string) => {
     setLoading(true)
     axios<T>({
       method: 'GET',
-      baseURL: 'https://fakestoreapi.com',
+      baseURL: apiPaths.baseUrl,
       url: `/${url}`,
     })
       .then(({ data }) => {

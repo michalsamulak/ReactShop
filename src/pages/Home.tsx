@@ -1,13 +1,12 @@
 import { SingleItem } from "../components/SingleItem";
-import { useFetch } from "../hooks/useFetch";
+import { useFetchOnInit } from "../hooks/useFetchOnInit";
 import { HomeWrapper } from "../style/Home.style";
 import { IProductsArray, ISingleProduct } from "../types";
+import { apiPaths } from "../utils/utils";
 
-// utils.ts
-// const apiPaths = { products: '/products' }
 
 export const Home = () => {
-    const { data, loading } = useFetch<IProductsArray>("products"); // apiPaths.products
+    const { data, loading } = useFetchOnInit<IProductsArray>(apiPaths.products); 
 
     if (loading) {
         return  <HomeWrapper><span className="loader"></span></HomeWrapper>
