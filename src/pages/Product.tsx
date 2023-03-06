@@ -8,7 +8,7 @@ import { ISingleProduct } from "../types";
 export const Product = () => {
     // const { add, getQuantity, cartProducts } = useShop();
     const { productId } = useParams();
-    const { data, loading } = useFetch<ISingleProduct>(`products/${productId}`);
+    const { data, loading } = useFetch<ISingleProduct>(`products/${productId}`); // ${apiPaths.products}/${productId}
 
 
     return (

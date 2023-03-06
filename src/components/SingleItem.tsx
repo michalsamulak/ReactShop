@@ -17,7 +17,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
     const { add, getQuantity, cartProducts } = useShop();
 
     const handleAddToBasket = (id: number) => {
-        add(id);
+        add(id); // { id, image... }
     };
 
     return (

@@ -23,7 +23,11 @@ export const useShop = () => {
 export const ShopProvider = ({ children }: IContextChildren) => {
     const [cartProducts, setCartProducts] = useState<ICartProduct[]>([]);
 
+    // id, quantity
+    // id - quantity
+
     const add = (id: number) => {
+        // itemToAdd / image, price, title, id
         setCartProducts((prevCart) => {
             const productFromCart = prevCart.find(
                 (product) => product.id === id
@@ -31,13 +35,13 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
             if (productFromCart) {
                 return prevCart.map((product) =>
-                    product.id === id
+                    product.id === id // itemToAdd.id
                         ? { ...product, quantity: product.quantity + 1 }
                         : product
                 );
             }
 
-            return [...prevCart, { id, quantity: 1 }];
+            return [...prevCart, { id, quantity: 1 }]; // ...itemToAdd
         });
     };
 

@@ -3,7 +3,6 @@ import { Navbar } from '../style/Navbar.style'
 
 export const Navigation = () => {
   return (
-    <>
     <Navbar>
 
             <Link className="link" to="/">
@@ -19,7 +18,5 @@ export const Navigation = () => {
                 Contact
             </Link>
     </Navbar>
-        
-        </>
   )
 }
