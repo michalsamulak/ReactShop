@@ -7,6 +7,7 @@
 
 body {
   background-color: #f2f3ee;
+  overflow-x: hidden;
 }
 
 
@@ -42,3 +43,4 @@ body {
     transform: rotate(360deg);
   }
 } 
+

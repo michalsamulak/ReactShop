@@ -4,10 +4,14 @@ import styled from "styled-components";
 export const HomeWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    
 `
 
 export const Card = styled.div`
-    background-color: #ffe8cd40;
+
+background-color: rgba(89, 131, 252, 1);
+background-image: linear-gradient(358deg, rgba(89, 131, 252, 1) 0%, rgba(255, 255, 255, 1) 41%);
+
 
     display: flex;
     flex-direction: column;
@@ -20,7 +24,7 @@ export const Card = styled.div`
     height: 500px;
     margin: 15px;
 
-    box-shadow: 2px 2px 2px #252525;
+    box-shadow: 10px 10px 10px #252525;
 `
 
 export const Title = styled.h5`
