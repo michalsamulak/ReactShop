@@ -11,7 +11,9 @@ import {
     DiscountInput,
     PaymantsLogo,
 } from "../style/Cart.style";
-
+import visa from '../assets/visa.png'
+import mastercard from '../assets/mastercard.png'
+import paypal from '../assets/paypal.png'
 export const Cart = () => {
     return (
         <CartContainer>
@@ -28,10 +30,9 @@ export const Cart = () => {
 
                     <CartCheckoutBtn>Checkout</CartCheckoutBtn>
                     <CartCheckoutPaymants>
-                        <PaymantsLogo src="https://cdn-icons-png.flaticon.com/512/196/196578.png" />
-                        <PaymantsLogo src="https://img.icons8.com/color/256/mastercard-logo.png" />
-
-                        <PaymantsLogo src="https://cdn-icons-png.flaticon.com/512/196/196565.png" />
+                        <PaymantsLogo src={visa}/>
+                        <PaymantsLogo src={mastercard} />
+                        <PaymantsLogo src={paypal} />
                     </CartCheckoutPaymants>
                 </CartFooterBox>
             </CartFooterWrapper>
