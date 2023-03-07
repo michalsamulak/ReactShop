@@ -4,10 +4,21 @@ import { IContextChildren } from "../types";
 export type ICartProduct = {
     id: number;
     quantity: number;
+    price: number,
+    title: string,
+    image: string,
 };
 
+export type IItemToAdd = {
+    id: number;
+    price: number,
+    title: string,
+    image: string,
+};
+
+
 export type ICartActions = {
-    add: (id: number) => void;
+    add: (itemToAdd: ICartProduct) => void;
     decrice: (id: number) => void;
     remove: (id: number) => void;
     getQuantity: (id: number) => number;
@@ -26,22 +37,22 @@ export const ShopProvider = ({ children }: IContextChildren) => {
     // id, quantity
     // id - quantity
 
-    const add = (id: number) => {
+    const add = (itemToAdd: IItemToAdd) => {
         // itemToAdd / image, price, title, id
         setCartProducts((prevCart) => {
             const productFromCart = prevCart.find(
-                (product) => product.id === id
+                (product) => product.id === itemToAdd.id
             );
 
             if (productFromCart) {
                 return prevCart.map((product) =>
-                    product.id === id // itemToAdd.id
+                    product.id === itemToAdd.id // itemToAdd.id
                         ? { ...product, quantity: product.quantity + 1 }
                         : product
                 );
             }
 
-            return [...prevCart, { id, quantity: 1 }]; // ...itemToAdd
+            return [...prevCart, { ...itemToAdd, quantity: 1 }]; // ...itemToAdd
         });
     };
 
