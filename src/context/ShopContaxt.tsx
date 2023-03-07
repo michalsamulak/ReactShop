@@ -16,7 +16,7 @@ export type ICartActions = {
 
 const ShopContext = createContext({} as ICartActions);
 
-export const useShop = () => {
+export const useCart = () => {
     return useContext(ShopContext);
 };
 

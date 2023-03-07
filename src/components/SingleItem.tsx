@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useShop } from "../context/ShopContaxt";
+import { useCart } from "../context/ShopContaxt";
 import {
     Button,
     Card,
@@ -14,7 +14,7 @@ import { ISingleProduct } from "../types";
 export const SingleItem = ({ product }: { product: ISingleProduct }) => {
     const { image, id, title, description, price } = product;
 
-    const { add, getQuantity, cartProducts } = useShop();
+    const { add, getQuantity, cartProducts } = useCart();
 
     const handleAddToBasket = (id: number) => {
         add(id); // { id, image... }

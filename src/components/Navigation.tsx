@@ -11,8 +11,8 @@ export const Navigation = () => {
             <Link className="link" to="Categories">
                 Categories
             </Link>
-            <Link className="link" to="Product">
-                Product
+            <Link className="link" to="Cart">
+                Cart
             </Link>
             <Link className="link" to="Contact">
                 Contact

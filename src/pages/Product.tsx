@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useShop } from "../context/ShopContaxt";
+import { useCart } from "../context/ShopContaxt";
 import { useFetchOnInit } from "../hooks/useFetchOnInit";
 import { Container, Error } from "../style/Common";
 import { Box, BoxImg, Details, PriceWrapper, ProductDescr, ProductPrice, ProductRate, ProductTitle } from "../style/Product.style";

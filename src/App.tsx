@@ -6,6 +6,7 @@ import { Contact } from "./pages/Contact";
 import { Product } from "./pages/Product";
 import { Container } from "./style/Common";
 import { ShopProvider } from "./context/ShopContaxt";
+import { Cart } from "./pages/Cart";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/Product/:productId" element={<Product />} />
                     <Route path="/Categories" element={<Categories />} />
                     <Route path="/Contact" element={<Contact />} />
+                    <Route path="/Cart" element={<Cart />} />
                 </Routes>
             </Container>
         </ShopProvider>
