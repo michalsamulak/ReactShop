@@ -1,8 +1,15 @@
 import React from 'react'
-import { CartContainer } from '../style/Cart.style'
+import { CartContainer, CartFooterBox, CartFooterWrapper, CartProduktWrapper, DiscountInput } from '../style/Cart.style'
 
 export const Cart = () => {
   return (
-    <CartContainer>sssssssssssssss</CartContainer>
+    <CartContainer>
+        <CartProduktWrapper>text</CartProduktWrapper>
+        <CartFooterWrapper>
+        <CartFooterBox><DiscountInput placeholder='Promo code'/></CartFooterBox>
+        <CartFooterBox>s</CartFooterBox>
+
+        </CartFooterWrapper>
+    </CartContainer>
   )
 }
