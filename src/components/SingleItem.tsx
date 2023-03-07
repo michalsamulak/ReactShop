@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useCart } from "../context/ShopContaxt";
+import { IItemToAdd, useCart } from "../context/ShopContaxt";
 import {
     Button,
     Card,
@@ -14,10 +14,13 @@ import { ISingleProduct } from "../types";
 export const SingleItem = ({ product }: { product: ISingleProduct }) => {
     const { image, id, title, description, price } = product;
 
-    const { add, getQuantity, cartProducts } = useCart();
+    const { add } = useCart();
 
-    const handleAddToBasket = (id: number) => {
-        add({id, price, title, image}); // { id, image... }
+        const handleAddToBasket = ({id, price, title, image} : IItemToAdd) => {
+
+        const itemToAdd = {id, price, title, image}
+
+        add(itemToAdd); 
     };
 
     return (
@@ -29,7 +32,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
             <Description>{description}</Description>
             <Value>
                 <Price>${price}</Price>
-                <Button onClick={() => handleAddToBasket(id)}>Buy</Button>
+                <Button onClick={() => handleAddToBasket({id, price, title, image})}>Buy</Button>
             </Value>
         </Card>
     );

@@ -18,7 +18,7 @@ export type IItemToAdd = {
 
 
 export type ICartActions = {
-    add: (itemToAdd: ICartProduct) => void;
+    add: (itemToAdd: IItemToAdd) => void;
     decrice: (id: number) => void;
     remove: (id: number) => void;
     getQuantity: (id: number) => number;
@@ -34,11 +34,8 @@ export const useCart = () => {
 export const ShopProvider = ({ children }: IContextChildren) => {
     const [cartProducts, setCartProducts] = useState<ICartProduct[]>([]);
 
-    // id, quantity
-    // id - quantity
-
     const add = (itemToAdd: IItemToAdd) => {
-        // itemToAdd / image, price, title, id
+
         setCartProducts((prevCart) => {
             const productFromCart = prevCart.find(
                 (product) => product.id === itemToAdd.id
@@ -46,13 +43,13 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
             if (productFromCart) {
                 return prevCart.map((product) =>
-                    product.id === itemToAdd.id // itemToAdd.id
+                    product.id === itemToAdd.id 
                         ? { ...product, quantity: product.quantity + 1 }
                         : product
                 );
             }
 
-            return [...prevCart, { ...itemToAdd, quantity: 1 }]; // ...itemToAdd
+            return [...prevCart, { ...itemToAdd, quantity: 1 }]; 
         });
     };
 
