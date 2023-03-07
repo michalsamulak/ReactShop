@@ -9,8 +9,8 @@ export const HomeWrapper = styled.div`
 
 export const Card = styled.div`
 
-background-color: rgba(89, 131, 252, 1);
-background-image: linear-gradient(358deg, rgba(89, 131, 252, 1) 0%, rgba(255, 255, 255, 1) 41%);
+    background-color: rgba(89, 131, 252, 1);
+    background-image: linear-gradient(358deg, rgba(89, 131, 252, 1) 0%, rgba(255, 255, 255, 1) 41%);
 
 
     display: flex;

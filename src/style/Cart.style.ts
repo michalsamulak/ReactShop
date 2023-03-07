@@ -7,47 +7,75 @@ export const CartContainer = styled.div`
     width: 70vw;
     min-height: 80vh;
     justify-content: space-between;
+    color: #252525;
 `
 
 export const CartProduktWrapper = styled.div`
-    height: 150px;
-//test color
-
-    background-color: aliceblue;
+    padding: 15px;
+    background-color: #dddbdb;;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
 `
-// image, price, title, id
 
-export const CartProduct = styled.div`
-
+export const CartProductBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-left: 15px;
+    margin-right: 30px;
 `
 
 
 
 export const CartProductImg = styled.img`
-width: 80px;
-/* object-fit: contain; */
-margin-left: 30px;
-
+    width: 80px;
+    margin-left: 15px;
+    border-radius: 5px;
 `
 
 export const CartProductBtn = styled(ButtonGlobal)`
- width: 150px;
+    width: 30px;
 `
 
 export const CartProductQuantity = styled.div`
-
+    margin: 10px;
+    font-size: 20px;
 `
 
-export const CartProductTitle = styled.div`
-
+export const CartProductText = styled.div`
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+`
+export const CartProductDescriptions = styled.div`
+    margin-top: 10px;
+    color: rgb(37 37 37 / 78%);
 `
 
+
+export const CartQtyActions = styled.div`
+    display: flex;
+    width: 150px;
+    align-items: center;
+    margin: 15px;
+    justify-content: space-around;
+    align-self: end;
+`
+export const BtnRemove = styled.div`
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: -4px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+`
 export const CartFooterWrapper = styled.div`
     height: 150px;
-
     display: flex;
     justify-content: space-between;
-
 `
 
 export const CartFooterBox = styled.div`
@@ -56,7 +84,6 @@ export const CartFooterBox = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
 `
 
 export const DiscountInput = styled.input`
@@ -65,38 +92,31 @@ export const DiscountInput = styled.input`
     text-align: center;
     letter-spacing: 2px;
     background: none;
-
     padding: 10px;
     border: 1px solid #80808045;
 `
 export const CartTitleBox = styled.div`
     display:flex;
     justify-content: space-between;
-
     font-weight: bold;
     font-size: 16px;
     margin: 10px;
     width: 200px;
 `
-export const CartFooterTitle = styled.div`
 
-`
-
-export const CartFooterPrice = styled.div`
-
-`
 
 export const CartFooterDisclaimer = styled.div`
-
+    font-size: 10px;
+    text-align: center;
+    color: rgb(128 128 128 / 71%);;
+    background: none;
+    padding: 10px;
 `
 
 export const CartCheckoutBtn = styled(ButtonGlobal)`
  width: 150px;
 `
 
-export const CartCheckoutPaymants = styled.div`
-
-`
 
 export const PaymantsLogo = styled.img`
     width: 50px;
