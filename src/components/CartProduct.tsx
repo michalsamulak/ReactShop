@@ -1,29 +1,50 @@
-import React from 'react'
-import { CartProduktWrapper, CartProductBox, CartProductImg, CartProductText, CartProductDescriptions, CartQtyActions, CartProductBtn, CartProductQuantity, BtnRemove } from '../style/Cart.style'
+import { useCart } from "../context/ShopContaxt";
+import {
+    CartProduktWrapper,
+    CartProductBox,
+    CartProductImg,
+    CartProductText,
+    CartProductDescriptions,
+    CartQtyActions,
+    CartProductBtn,
+    CartProductQuantity,
+    BtnRemove,
+} from "../style/Cart.style";
 
 export const CartProduct = () => {
-  return (
-    <CartProduktWrapper>
-                <CartProductBox>
-                    <CartProductImg src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
-                </CartProductBox>
-                <CartProductBox>
-                    <CartProductText>Title</CartProductText>
-                    <CartProductDescriptions>
-                        Lorem impsum lorem impsum lorem impsum lorem impsum
-                        lorem impsum lorem impsum lorem impsum lorem impsum
-                        lorem impsum lorem impsum lorem impsum lorem impsum
-                        lorem impsum{" "}
-                    </CartProductDescriptions>
+    const { cartProducts } = useCart();
+    console.log(cartProducts);
 
-                    <CartQtyActions>
-                        <CartProductBtn>-</CartProductBtn>
-                        <CartProductQuantity>2</CartProductQuantity>
-                        <CartProductBtn>+</CartProductBtn>
-                        <CartProductText>$55.88</CartProductText>
-                        <BtnRemove>&#x2715;</BtnRemove>
-                    </CartQtyActions>
-                </CartProductBox>
-            </CartProduktWrapper>
-  )
-}
+    return (
+        <>
+            {cartProducts.map((product) => {
+                const { id, image, title, quantity, price, description } =
+                    product;
+
+                return (
+                    <CartProduktWrapper key={id}>
+                        <CartProductBox>
+                            <CartProductImg src={image} />
+                        </CartProductBox>
+                        <CartProductBox>
+                            <CartProductText>{title}</CartProductText>
+                            <CartProductDescriptions>
+                                {description}
+                            </CartProductDescriptions>
+
+                            <CartQtyActions>
+                                <CartProductBtn>-</CartProductBtn>
+                                <CartProductQuantity>
+                                    {quantity}
+                                </CartProductQuantity>
+                                <CartProductBtn>+</CartProductBtn>
+                                <CartProductText>${price}</CartProductText>
+                                <BtnRemove>&#x2715;</BtnRemove>
+                            </CartQtyActions>
+                        </CartProductBox>
+                    </CartProduktWrapper>
+                );
+            })}
+        </>
+    );
+};

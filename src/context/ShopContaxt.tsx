@@ -7,6 +7,7 @@ export type ICartProduct = {
     price: number,
     title: string,
     image: string,
+    description: string
 };
 
 export type IItemToAdd = {
@@ -14,6 +15,7 @@ export type IItemToAdd = {
     price: number,
     title: string,
     image: string,
+    description: string
 };
 
 

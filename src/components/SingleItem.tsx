@@ -18,7 +18,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
 
         const handleAddToBasket = ({id, price, title, image} : IItemToAdd) => {
 
-        const itemToAdd = {id, price, title, image}
+        const itemToAdd = {id, price, title, image, description}
 
         add(itemToAdd); 
     };
@@ -32,7 +32,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
             <Description>{description}</Description>
             <Value>
                 <Price>${price}</Price>
-                <Button onClick={() => handleAddToBasket({id, price, title, image})}>Buy</Button>
+                <Button onClick={() => handleAddToBasket({id, price, title, image, description})}>Buy</Button>
             </Value>
         </Card>
     );
