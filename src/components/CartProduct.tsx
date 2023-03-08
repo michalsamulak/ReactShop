@@ -12,17 +12,20 @@ import {
 } from "../style/Cart.style";
 
 export const CartProduct = () => {
-    const { cartProducts } = useCart();
+    const { cartProducts, add, decrice, remove } = useCart();
 
 
     if(cartProducts.length === 0) return (<CartProduktWrapper>You're Cart is empty</CartProduktWrapper>)
 
+    
+    
     return (
         <>
             {cartProducts.map((product) => {
                 const { id, image, title, quantity, price, description } =
-                    product;
-
+                product;
+                const inc = {id, price, title, image, description}
+             
                 return (
                     <CartProduktWrapper key={id}>
                         <CartProductBox>
@@ -35,13 +38,13 @@ export const CartProduct = () => {
                             </CartProductDescriptions>
 
                             <CartQtyActions>
-                                <CartProductBtn>-</CartProductBtn>
+                                <CartProductBtn onClick={() => decrice(id)}>-</CartProductBtn>
                                 <CartProductQuantity>
                                     {quantity}
                                 </CartProductQuantity>
-                                <CartProductBtn>+</CartProductBtn>
+                                <CartProductBtn onClick={()=>add(inc)}>+</CartProductBtn>
                                 <CartProductText>${price * quantity}</CartProductText>
-                                <BtnRemove>&#x2715;</BtnRemove>
+                                <BtnRemove onClick={()=>remove(id)}>&#x2715;</BtnRemove>
                             </CartQtyActions>
                         </CartProductBox>
                     </CartProduktWrapper>

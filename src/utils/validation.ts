@@ -6,5 +6,5 @@ export const schema = Yup.object({
     surname: Yup.string().required(),
     email: Yup.string().email().required(),
     numbe: Yup.number().required(),
-    message: Yup.string()
+    message: Yup.string().required(),
 });
