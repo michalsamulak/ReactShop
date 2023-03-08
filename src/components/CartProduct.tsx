@@ -13,7 +13,9 @@ import {
 
 export const CartProduct = () => {
     const { cartProducts } = useCart();
-    console.log(cartProducts);
+
+
+    if(cartProducts.length === 0) return (<CartProduktWrapper>You're Cart is empty</CartProduktWrapper>)
 
     return (
         <>
@@ -38,7 +40,7 @@ export const CartProduct = () => {
                                     {quantity}
                                 </CartProductQuantity>
                                 <CartProductBtn>+</CartProductBtn>
-                                <CartProductText>${price}</CartProductText>
+                                <CartProductText>${price * quantity}</CartProductText>
                                 <BtnRemove>&#x2715;</BtnRemove>
                             </CartQtyActions>
                         </CartProductBox>
