@@ -88,11 +88,12 @@ export const ShopProvider = ({ children }: IContextChildren) => {
     const getTotalPrice = () => {
 
         const total = cartProducts.reduce((acc, curr) => {
-          return acc + (curr.quantity * curr.price)
+          return (acc + (curr.quantity * curr.price))
 
 
         }, 0)
-        return total
+
+        return Number(total.toFixed(2))
     }
 
     const providerValues = {

@@ -3,8 +3,12 @@ import { CartCheckoutBtn, CartFooterBox, CartFooterDisclaimer, CartFooterWrapper
 import visa from "../assets/visa.png";
 import mastercard from "../assets/mastercard.png";
 import paypal from "../assets/paypal.png";
+import { useCart } from '../context/ShopContaxt';
 
 export const Paymant = () => {
+
+    const {getTotalPrice} = useCart()
+
   return (
     <CartFooterWrapper>
                 <CartFooterBox>
@@ -13,7 +17,7 @@ export const Paymant = () => {
                 <CartFooterBox>
                     <CartTitleBox>
                         <div>Subtotal</div>
-                        <div>$55.55</div>
+                        <div>${getTotalPrice()}</div>
                     </CartTitleBox>
                     <CartFooterDisclaimer>
                         Shipping, taxes and discount calculated at checkout
