@@ -1,5 +1,5 @@
 import { Field, FieldProps, Form, Formik } from 'formik';
-import { Label, SubmitBtn } from '../style/Contact.style';
+import { ContactForm, InputWrapper, Label, SubmitBtn } from '../style/Contact.style';
 import { schema } from "../utils/validation";
 
 export const Contact = () => {
@@ -23,44 +23,46 @@ export const Contact = () => {
     onSubmit={()=>{}}
 > 
     {() => (
-        <Form className="form">
-            <div className="input">
+        <ContactForm className="form">
+          <h1>&bull; Keep in Touch &bull;</h1>
+          <div className="underline"></div>
+            <InputWrapper >
                 <Label htmlFor={"name"} >
                     Name:
                 </Label>
-                <Field as="input" id={"name"} name={"name"} className='field'></Field>
-            </div>
+                <Field as="input" type='text' id={"name"} name={"name"} className='field'></Field>
+            </InputWrapper>
 
-            <div className="input">
+            <InputWrapper >
                 <Label htmlFor={"namsurnamee"} >
                 Surname:
                 </Label>
-                <Field as="input" id={"surname"} name={"surname"} className='field'></Field>
-            </div>
+                <Field as="input" type='text' id={"surname"} name={"surname"} className='field'></Field>
+            </InputWrapper>
 
-            <div className="input">
+            <InputWrapper >
                 <Label htmlFor={"email"} >
                 E-mail:
                 </Label>
-                <Field as="input" type="email" id={"email"} name={"email"} className='field'></Field>
-            </div>
-            <div className="number">
+                <Field as="input" type="email" id={"email"} name={"email"} className='email'></Field>
+            </InputWrapper>
+            <InputWrapper >
                 <Label htmlFor={"number"} >
                     Contact number:
                 </Label>
-                <Field as="input" id={"number"} name={"number"} className='field'></Field>
-            </div>
-            <div className="message">
+                <Field as="input" type='text' id={"number"} name={"number"} className='number'></Field>
+            </InputWrapper>
+            <InputWrapper >
                 <Label htmlFor={"message"} >
                 Message: 
                 </Label>
                 <Field as="textarea"  id={"message"} name={"message"} className='field'></Field>
-            </div>
+            </InputWrapper>
             
             <SubmitBtn type="submit">
                 Submit
             </SubmitBtn>
-        </Form>
+        </ContactForm>
     )}
 </Formik>
   )

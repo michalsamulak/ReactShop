@@ -26,7 +26,6 @@ export type ICartActions = {
     getQuantity: (id: number) => number;
     cartProducts: ICartProduct[];
     getTotalPrice: () => number;
-
 };
 
 const ShopContext = createContext({} as ICartActions);
