@@ -1,1 +1,1 @@
-export const apiPaths = { baseUrl: 'https://fakestoreapi.com', products: 'products' }
+export const apiPaths = { baseUrl: 'https://fakestoreapi.com', products: 'products', categories: 'products/categories' }

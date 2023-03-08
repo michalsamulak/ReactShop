@@ -18,6 +18,9 @@ export type ISingleProduct = {
 
 export type IProductsArray = ISingleProduct[] 
 
+export type ICategories = string[]
+
+
 export type IContextChildren = {
     children: ReactNode
 }

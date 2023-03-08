@@ -18,6 +18,8 @@ export const Home = () => {
         );
     }
 
+
+
     if (loading) {
         return (
             <HomeWrapper>
