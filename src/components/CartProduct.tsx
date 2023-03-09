@@ -11,6 +11,12 @@ import {
     BtnRemove,
 } from "../style/Cart.style";
 
+// CartProduct
+    // index.tsx
+    // styles.ts
+
+
+
 export const CartProduct = () => {
     const { cartProducts, add, decrice, remove } = useCart();
 
@@ -33,7 +39,7 @@ export const CartProduct = () => {
                         </CartProductBox>
                         <CartProductBox>
                             <CartProductText>{title}</CartProductText>
-                            <CartProductDescriptions>
+                            <CartProductDescriptions> 
                                 {description}
                             </CartProductDescriptions>
 

@@ -5,7 +5,7 @@ import mastercard from "../assets/mastercard.png";
 import paypal from "../assets/paypal.png";
 import { useCart } from '../context/ShopContaxt';
 
-export const Paymant = () => {
+export const Payment = () => {
 
     const {getTotalPrice} = useCart()
 

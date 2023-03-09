@@ -13,7 +13,7 @@ export const CategoriesContainer = styled.div`
 
 export const CategoriesWrapper = styled.div`
     padding: 15px;
-    background-color: #dddbdb;;
+    background-color: #dddbdb;
     display: flex;
     align-items: center;
     border-radius: 5px;

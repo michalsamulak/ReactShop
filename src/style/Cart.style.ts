@@ -4,7 +4,7 @@ import { ButtonGlobal } from "./Common";
 export const CartContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 80vw;
     min-height: 80vh;
     justify-content: space-between;
     color: #252525;
@@ -16,6 +16,8 @@ export const CartProduktWrapper = styled.div`
     display: flex;
     align-items: center;
     border-radius: 5px;
+    margin-bottom: 1px;
+
 `
 
 export const CartProductBox = styled.div`
