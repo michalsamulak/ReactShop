@@ -31,7 +31,7 @@ export const Home = () => {
     if (!loading && data === null) {
         return (
             <HomeWrapper>
-                <Error>Sorry, no data retrived...</Error>;
+                <Error>Sorry, no data retrieved...</Error>;
             </HomeWrapper>
         );
     }

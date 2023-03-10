@@ -1,9 +1,8 @@
-import React from 'react'
-import { CartCheckoutBtn, CartFooterBox, CartFooterDisclaimer, CartFooterWrapper, CartTitleBox, DiscountInput, PaymantsLogo } from '../style/Cart.style'
+import { CartCheckoutBtn, CartFooterBox, CartFooterDisclaimer, CartFooterWrapper, CartTitleBox, DiscountInput, PaymentsLogo } from '../style/Cart.style'
 import visa from "../assets/visa.png";
 import mastercard from "../assets/mastercard.png";
 import paypal from "../assets/paypal.png";
-import { useCart } from '../context/ShopContaxt';
+import { useCart } from '../context/ShopContext';
 
 export const Payment = () => {
 
@@ -24,9 +23,9 @@ export const Payment = () => {
                     </CartFooterDisclaimer>
                     <CartCheckoutBtn>Checkout</CartCheckoutBtn>
                     <div>
-                        <PaymantsLogo src={visa} />
-                        <PaymantsLogo src={mastercard} />
-                        <PaymantsLogo src={paypal} />
+                        <PaymentsLogo src={visa} />
+                        <PaymentsLogo src={mastercard} />
+                        <PaymentsLogo src={paypal} />
                     </div>
                 </CartFooterBox>
             </CartFooterWrapper>

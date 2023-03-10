@@ -1,6 +1,6 @@
-import { useCart } from "../context/ShopContaxt";
+import { useCart } from "../context/ShopContext";
 import {
-    CartProduktWrapper,
+    CartProductWrapper,
     CartProductBox,
     CartProductImg,
     CartProductText,
@@ -18,10 +18,10 @@ import {
 
 
 export const CartProduct = () => {
-    const { cartProducts, add, decrice, remove } = useCart();
+    const { cartProducts, add, decrease, remove } = useCart();
 
 
-    if(cartProducts.length === 0) return (<CartProduktWrapper>You're Cart is empty</CartProduktWrapper>)
+    if(cartProducts.length === 0) return (<CartProductWrapper>You're Cart is empty</CartProductWrapper>)
 
     
     
@@ -33,7 +33,7 @@ export const CartProduct = () => {
                 const inc = {id, price, title, image, description}
              
                 return (
-                    <CartProduktWrapper key={id}>
+                    <CartProductWrapper key={id}>
                         <CartProductBox>
                             <CartProductImg src={image} />
                         </CartProductBox>
@@ -44,7 +44,7 @@ export const CartProduct = () => {
                             </CartProductDescriptions>
 
                             <CartQtyActions>
-                                <CartProductBtn onClick={() => decrice(id)}>-</CartProductBtn>
+                                <CartProductBtn onClick={() => decrease(id)}>-</CartProductBtn>
                                 <CartProductQuantity>
                                     {quantity}
                                 </CartProductQuantity>
@@ -53,7 +53,7 @@ export const CartProduct = () => {
                                 <BtnRemove onClick={()=>remove(id)}>&#x2715;</BtnRemove>
                             </CartQtyActions>
                         </CartProductBox>
-                    </CartProduktWrapper>
+                    </CartProductWrapper>
                 );
             })}
         </>

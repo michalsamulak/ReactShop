@@ -1,4 +1,4 @@
-import { Field, FieldProps, Form, Formik } from 'formik';
+import { Field, Formik } from 'formik';
 import { ContactForm, InputWrapper, Label, SubmitBtn } from '../style/Contact.style';
 import { schema } from "../utils/validation";
 
@@ -34,7 +34,7 @@ export const Contact = () => {
             </InputWrapper>
 
             <InputWrapper >
-                <Label htmlFor={"namsurnamee"} >
+                <Label htmlFor={"surname"} >
                 Surname:
                 </Label>
                 <Field as="input" type='text' id={"surname"} name={"surname"} className='field'></Field>

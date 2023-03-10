@@ -21,7 +21,7 @@ export type IItemToAdd = {
 
 export type ICartActions = {
     add: (itemToAdd: IItemToAdd) => void;
-    decrice: (id: number) => void;
+    decrease: (id: number) => void;
     remove: (id: number) => void;
     getQuantity: (id: number) => number;
     cartProducts: ICartProduct[];
@@ -56,7 +56,7 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         });
     };
 
-    const decrice = (id: number) => {
+    const decrease = (id: number) => {
         setCartProducts((prevCart) => {
             const productFromCart = prevCart.find(
                 (product) => product.id === id
@@ -99,7 +99,7 @@ export const ShopProvider = ({ children }: IContextChildren) => {
 
     const providerValues = {
         add,
-        decrice,
+        decrease,
         remove,
         getQuantity,
         cartProducts,

@@ -5,7 +5,7 @@ import { Categories } from "./pages/Categories";
 import { Contact } from "./pages/Contact";
 import { Product } from "./pages/Product";
 import { Container } from "./style/Common";
-import { ShopProvider } from "./context/ShopContaxt";
+import { ShopProvider } from "./context/ShopContext";
 import { Cart } from "./pages/Cart";
 
 function App() {

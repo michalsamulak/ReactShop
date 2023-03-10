@@ -10,7 +10,7 @@ export const CartContainer = styled.div`
     color: #252525;
 `
 
-export const CartProduktWrapper = styled.div`
+export const CartProductWrapper = styled.div`
     padding: 15px;
     background-color: #dddbdb;;
     display: flex;
@@ -121,7 +121,7 @@ export const CartCheckoutBtn = styled(ButtonGlobal)`
 `
 
 
-export const PaymantsLogo = styled.img`
+export const PaymentsLogo = styled.img`
     width: 50px;
     padding: 5px;
 `
