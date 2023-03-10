@@ -1,13 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useFetchOnInit } from "../hooks/useFetchOnInit";
-import { Container, Error } from "../style/Common";
-import { Box, BoxImg, Details, PriceWrapper, ProductDescr, ProductPrice, ProductRate, ProductTitle } from "../style/Product.style";
-import { ISingleProduct } from "../types";
-import { apiPaths } from "../utils/utils";
+import { useFetchOnInit } from "../../hooks/useFetchOnInit";
+import { Container, Error } from "../../style/Global.style";
+import { Box, BoxImg, Details, PriceWrapper, ProductDescr, ProductPrice, ProductRate, ProductTitle } from "./Product.style";
+import { ISingleProduct } from "../../types";
+import { apiPaths } from "../../utils/utils";
 
 
 export const Product = () => {
-    // const { add, getQuantity, cartProducts } = useShop();
     const { productId } = useParams();
     const { data, loading, error } = useFetchOnInit<ISingleProduct>(`${apiPaths.products}/${productId}`); 
 

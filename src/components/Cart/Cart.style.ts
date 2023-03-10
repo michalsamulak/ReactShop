@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonGlobal } from "./Common";
+import { ButtonGlobal } from "../../style/Global.style";
 
 export const CartContainer = styled.div`
     display: flex;

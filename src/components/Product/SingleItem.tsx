@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IItemToAdd, useCart } from "../context/ShopContext";
+import { IItemToAdd, useCart } from "../../context/ShopContext";
 import {
     Button,
     Card,
@@ -8,8 +8,8 @@ import {
     Price,
     Title,
     Value,
-} from "../style/Home.style";
-import { ISingleProduct } from "../types";
+} from "../Header/Home.style";
+import { ISingleProduct } from "../../types";
 
 export const SingleItem = ({ product }: { product: ISingleProduct }) => {
     const { image, id, title, description, price } = product;

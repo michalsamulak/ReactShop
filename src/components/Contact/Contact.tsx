@@ -1,6 +1,6 @@
 import { Field, Formik } from 'formik';
-import { ContactForm, InputWrapper, Label, SubmitBtn } from '../style/Contact.style';
-import { schema } from "../utils/validation";
+import { ContactForm, InputWrapper, Label, SubmitBtn } from './Contact.style';
+import { schema } from "../../utils/validation";
 
 export const Contact = () => {
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import { useFetchOnInit } from '../hooks/useFetchOnInit';
-import { CategoriesContainer, CategoriesWrapper } from '../style/Categories.style'
-import { Error } from "../style/Common";
-import { HomeWrapper } from '../style/Home.style';
-import { apiPaths } from '../utils/utils';
+import { useFetchOnInit } from '../../hooks/useFetchOnInit';
+import { CategoriesContainer, CategoriesWrapper } from './Categories.style'
+import { Error } from "../../style/Global.style";
+import { HomeWrapper } from '../Header/Home.style';
+import { apiPaths } from '../../utils/utils';
 
 export const Categories = () => {
 

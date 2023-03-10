@@ -1,4 +1,4 @@
-import { useCart } from "../context/ShopContext";
+import { useCart } from "../../context/ShopContext";
 import {
     CartProductWrapper,
     CartProductBox,
@@ -9,7 +9,7 @@ import {
     CartProductBtn,
     CartProductQuantity,
     BtnRemove,
-} from "../style/Cart.style";
+} from "./Cart.style";
 
 // CartProduct
     // index.tsx

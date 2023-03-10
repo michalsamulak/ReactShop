@@ -1,12 +1,12 @@
-import { Navigation } from "./components/Navigation";
+import { Navigation } from "./components/Header/Nav/Navigation";
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Categories } from "./pages/Categories";
-import { Contact } from "./pages/Contact";
-import { Product } from "./pages/Product";
-import { Container } from "./style/Common";
+import { Home } from "./components/Header/Home";
+import { Categories } from "./components/Categories/Categories";
+import { Contact } from "./components/Contact/Contact";
+import { Product } from "./components/Product/Product";
+import { Container } from "./style/Global.style";
 import { ShopProvider } from "./context/ShopContext";
-import { Cart } from "./pages/Cart";
+import { Cart } from "./components/Cart/Cart";
 
 function App() {
     return (

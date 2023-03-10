@@ -1,9 +1,9 @@
-import { SingleItem } from "../components/SingleItem";
-import { useFetchOnInit } from "../hooks/useFetchOnInit";
-import { Error } from "../style/Common";
-import { HomeWrapper } from "../style/Home.style";
-import { IProductsArray, ISingleProduct } from "../types";
-import { apiPaths } from "../utils/utils";
+import { SingleItem } from "../Product/SingleItem";
+import { useFetchOnInit } from "../../hooks/useFetchOnInit";
+import { Error } from "../../style/Global.style";
+import { HomeWrapper } from "./Home.style";
+import { IProductsArray, ISingleProduct } from "../../types";
+import { apiPaths } from "../../utils/utils";
 
 export const Home = () => {
     const { data, loading, error } = useFetchOnInit<IProductsArray>(

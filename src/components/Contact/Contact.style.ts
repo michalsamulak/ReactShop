@@ -1,6 +1,6 @@
 import { Form } from "formik";
 import styled from "styled-components";
-import { ButtonGlobal } from "./Common";
+import { ButtonGlobal } from "../../style/Global.style";
 
 export const Label = styled.label`
     

@@ -1,8 +1,8 @@
-import { CartCheckoutBtn, CartFooterBox, CartFooterDisclaimer, CartFooterWrapper, CartTitleBox, DiscountInput, PaymentsLogo } from '../style/Cart.style'
-import visa from "../assets/visa.png";
-import mastercard from "../assets/mastercard.png";
-import paypal from "../assets/paypal.png";
-import { useCart } from '../context/ShopContext';
+import { CartCheckoutBtn, CartFooterBox, CartFooterDisclaimer, CartFooterWrapper, CartTitleBox, DiscountInput, PaymentsLogo } from './Cart.style'
+import visa from "../../assets/visa.png";
+import mastercard from "../../assets/mastercard.png";
+import paypal from "../../assets/paypal.png";
+import { useCart } from '../../context/ShopContext';
 
 export const Payment = () => {
 
