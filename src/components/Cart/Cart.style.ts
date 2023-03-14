@@ -8,11 +8,11 @@ export const CartContainer = styled.div`
     min-height: 80vh;
     justify-content: space-between;
     color: #252525;
-`
+    `
 
 export const CartProductWrapper = styled.div`
     padding: 15px;
-    background-color: #dddbdb;;
+    background-color: rgb(173 173 173);
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -109,9 +109,9 @@ export const CartTitleBox = styled.div`
 
 
 export const CartFooterDisclaimer = styled.div`
-    font-size: 10px;
+    font-size: 16px;
     text-align: center;
-    color: rgb(128 128 128 / 71%);;
+    color: #252525;
     background: none;
     padding: 10px;
 `
