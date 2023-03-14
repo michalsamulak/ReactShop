@@ -5,8 +5,9 @@ import { Box, BoxImg, Details, PriceWrapper, ProductDescr, ProductPrice, Product
 import { ISingleProduct } from "../../types";
 import { apiPaths } from "../../utils/utils";
 import { Button } from "../Header/Home.style";
-import { IItemToAdd, useCart } from "../../context/ShopContext";
-
+import { useCart } from "../../context/ShopContext";
+import { Toaster } from "react-hot-toast";
+import { notify } from "../../utils/utils";
 
 export const Product = () => {
     const { productId } = useParams();
@@ -20,6 +21,7 @@ export const Product = () => {
         const itemToAdd = { id, price, title, image, description };
 
         add(itemToAdd);
+        notify()
     };
 
     if (error) {
@@ -45,6 +47,7 @@ export const Product = () => {
                           <PriceWrapper>
                             <ProductPrice>${data.price}</ProductPrice>
                             <Button onClick={() => handleAddToBasket(data.id, data.price, data.title, data.image, data.description)}>Buy</Button>
+                            <Toaster/>
                             <ProductRate>&#11088;{data.rating.rate}/5</ProductRate>
                             <ProductRate>&#129489;{data.rating.count}</ProductRate>
                           </PriceWrapper>

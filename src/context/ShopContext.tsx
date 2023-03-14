@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { IContextChildren } from "../types";
 
+
 export type ICartProduct = {
     id: number;
     quantity: number;

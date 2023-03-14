@@ -10,6 +10,9 @@ import {
     Value,
 } from "../Header/Home.style";
 import { ISingleProduct } from "../../types";
+import { Toaster } from "react-hot-toast";
+import { notify } from "../../utils/utils";
+
 
 export const SingleItem = ({ product }: { product: ISingleProduct }) => {
     const { image, id, title, description, price } = product;
@@ -20,6 +23,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
         const itemToAdd = { id, price, title, image, description };
 
         add(itemToAdd);
+        notify();
     };
 
     return (
@@ -44,6 +48,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
                 >
                     Buy
                 </Button>
+                <Toaster />
             </Value>
         </Card>
     );
