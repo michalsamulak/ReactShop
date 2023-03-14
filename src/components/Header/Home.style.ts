@@ -69,6 +69,7 @@ export const Button = styled.button`
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
 
   color: #fff;
   background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
