@@ -4,7 +4,7 @@ import { apiPaths } from '../utils/utils';
 
 
 export const useFetchOnInit = <T>(url: string) => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [data, setData] = useState<T | null>(null)
   const [error, setError] = useState<Error | null>(null)
 
