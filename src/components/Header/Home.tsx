@@ -4,6 +4,9 @@ import { Error } from "../../style/Global.style";
 import { HomeWrapper } from "./Home.style";
 import { IProductsArray, ISingleProduct } from "../../types";
 import { apiPaths } from "../../utils/utils";
+import { Helmet } from "react-helmet";
+
+
 
 export const Home = () => {
     const { data, loading, error } = useFetchOnInit<IProductsArray>(
@@ -17,8 +20,6 @@ export const Home = () => {
             </HomeWrapper>
         );
     }
-
-
 
     if (loading) {
         return (
@@ -39,6 +40,7 @@ export const Home = () => {
     return (
         <HomeWrapper>
             <>
+            <Helmet title="Home | React Shop"/>
                 {data?.map((product: ISingleProduct) => {
                     return <SingleItem key={product.id} product={product} />;
                 })}

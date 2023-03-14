@@ -4,6 +4,7 @@ import { CategoriesContainer, CategoriesWrapper } from './Categories.style'
 import { Error } from "../../style/Global.style";
 import { HomeWrapper } from '../Header/Home.style';
 import { apiPaths } from '../../utils/utils';
+import { Helmet } from 'react-helmet';
 
 export const Categories = () => {
 
@@ -38,6 +39,7 @@ if (!loading && data === null) {
 
   return (
     <>
+       <Helmet title="Categories | React Shop"/>
       {data?.map(categorie => {
         return (
           <CategoriesContainer key={categorie}>

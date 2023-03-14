@@ -1,6 +1,7 @@
 import { Field, Formik } from 'formik';
 import { ContactForm, InputWrapper, Label, SubmitBtn } from './Contact.style';
 import { schema } from "../../utils/validation";
+import { Helmet } from 'react-helmet';
 
 export const Contact = () => {
 
@@ -15,11 +16,13 @@ export const Contact = () => {
 
 
   return (
+    <>
+      <Helmet title="Contact | React Shop"/>
     <Formik
     initialValues={initialValues}
-
+    
     validator={schema}
-
+    
     onSubmit={()=>{}}
 > 
     {() => (
@@ -65,5 +68,7 @@ export const Contact = () => {
         </ContactForm>
     )}
 </Formik>
+    </>
   )
+
 }

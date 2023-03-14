@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../../../context/ShopContext'
 import { Navbar } from './Navbar.style'
 
+
 export const Navigation = () => {
 
   const {getTotalItems} = useCart()

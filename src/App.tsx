@@ -7,10 +7,16 @@ import { Product } from "./components/Product/Product";
 import { Container } from "./style/Global.style";
 import { ShopProvider } from "./context/ShopContext";
 import { Cart } from "./components/Cart/Cart";
+import { Helmet } from "react-helmet";
 
 function App() {
     return (
         <ShopProvider>
+                    <Helmet>
+                    <title>React Shop</title>
+                    <meta name="ReactShop" content="React e commerce application" />
+                </Helmet>
+
             <Navigation />
             <Container>
                 <Routes>

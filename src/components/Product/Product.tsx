@@ -8,6 +8,7 @@ import { Button } from "../Header/Home.style";
 import { useCart } from "../../context/ShopContext";
 import { Toaster } from "react-hot-toast";
 import { notify } from "../../utils/utils";
+import { Helmet } from "react-helmet";
 
 export const Product = () => {
     const { productId } = useParams();
@@ -34,6 +35,7 @@ export const Product = () => {
 
     return (
         <>
+           <Helmet title="Product card | React Shop"/>
             {data === null || loading ? (
                 <span className="loader"></span>
             ) : (
