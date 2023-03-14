@@ -20,11 +20,11 @@ function App() {
             <Navigation />
             <Container>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Product/:productId" element={<Product />} />
-                    <Route path="/Categories" element={<Categories />} />
-                    <Route path="/Contact" element={<Contact />} />
-                    <Route path="/Cart" element={<Cart />} />
+                    <Route path="/ReactShop" element={<Home />} />
+                    <Route path="/ReactShop/Product/:productId" element={<Product />} />
+                    <Route path="/ReactShop/Categories" element={<Categories />} />
+                    <Route path="/ReactShop/Contact" element={<Contact />} />
+                    <Route path="/ReactShop/Cart" element={<Cart />} />
                 </Routes>
             </Container>
         </ShopProvider>

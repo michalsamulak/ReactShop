@@ -28,7 +28,7 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
 
     return (
         <Card>
-            <Link to={`/product/${id}`}>
+            <Link to={`/ReactShop/product/${id}`}>
                 <Picture src={image} alt={title} />
             </Link>
             <Title>{title}</Title>

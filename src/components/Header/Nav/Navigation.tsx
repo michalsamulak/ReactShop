@@ -13,16 +13,16 @@ export const Navigation = () => {
   return (
     <Navbar>
 
-            <Link className="link" to="/">
+            <Link className="link" to="/ReactShop">
                 Home
             </Link>
-            <Link className="link" to="Categories">
+            <Link className="link" to="ReactShop/Categories">
                 Categories
             </Link>
-            <Link className="link" to="Cart">
+            <Link className="link" to="ReactShop/Cart">
                 Cart ({getTotalItems()})
             </Link>
-            <Link className="link" to="Contact">
+            <Link className="link" to="ReactShop/Contact">
                 Contact
             </Link>
     </Navbar>
