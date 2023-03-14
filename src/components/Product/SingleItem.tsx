@@ -16,11 +16,10 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
 
     const { add } = useCart();
 
-        const handleAddToBasket = ({id, price, title, image} : IItemToAdd) => {
+    const handleAddToBasket = ({ id, price, title, image }: IItemToAdd) => {
+        const itemToAdd = { id, price, title, image, description };
 
-        const itemToAdd = {id, price, title, image, description}
-
-        add(itemToAdd); 
+        add(itemToAdd);
     };
 
     return (
@@ -32,7 +31,19 @@ export const SingleItem = ({ product }: { product: ISingleProduct }) => {
             <Description>{description}</Description>
             <Value>
                 <Price>${price}</Price>
-                <Button onClick={() => handleAddToBasket({id, price, title, image, description})}>Buy</Button>
+                <Button
+                    onClick={() =>
+                        handleAddToBasket({
+                            id,
+                            price,
+                            title,
+                            image,
+                            description,
+                        })
+                    }
+                >
+                    Buy
+                </Button>
             </Value>
         </Card>
     );
