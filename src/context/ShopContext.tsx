@@ -27,6 +27,7 @@ export type ICartActions = {
     getQuantity: (id: number) => number;
     cartProducts: ICartProduct[];
     getTotalPrice: () => number;
+    getTotalItems: () => number;
 };
 
 const ShopContext = createContext({} as ICartActions);
@@ -97,7 +98,13 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         return Number(total.toFixed(2))
     }
 
+    const getTotalItems = () => {
+        const total = cartProducts.reduce((acc, curr) => {
+            return(acc + curr.quantity)
+        }, 0)
 
+        return total
+    }
     const providerValues = {
         add,
         decrease,
@@ -105,7 +112,7 @@ export const ShopProvider = ({ children }: IContextChildren) => {
         getQuantity,
         cartProducts,
         getTotalPrice,
-
+        getTotalItems
     };
 
     return (
