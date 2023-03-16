@@ -48,6 +48,12 @@ background: #F2F3EB;
  	resize: none;
     width: 100%;
  }
+
+ @media only screen and (max-width: 600px) {
+  width: 100%;
+        padding: 1rem;
+        margin: 1rem;
+    }
 `
 
 export const InputWrapper = styled.div`
