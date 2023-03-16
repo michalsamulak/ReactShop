@@ -5,6 +5,10 @@
     box-sizing: border-box;
   }
 
+html {
+  font-size: 10px;
+}
+
 body {
   background-color: #d8ddc4;
   overflow-x: hidden;
