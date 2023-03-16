@@ -49,7 +49,9 @@ export const CartProductImg = styled.img`
     margin-left: 1.5rem;
     border-radius: .5rem;
 
-    
+    @media only screen and (max-width: 800px) {
+      width: 15rem;
+    }
 `
 
 export const CartProductBtn = styled(ButtonGlobal)`

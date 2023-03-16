@@ -11,6 +11,12 @@ export const HomeWrapper = styled.div`
      align-items: center;
      justify-content: center;
 }
+
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+    grid-template-columns: repeat(3, 1fr) ;
+
+
+}
     
 `
 
@@ -35,8 +41,9 @@ export const Card = styled.div`
 
     @media only screen and (max-width: 600px) {
         width: 55rem;
+    }
 
-}
+ 
 `
 
 export const Title = styled.h5`

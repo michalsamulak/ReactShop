@@ -14,11 +14,15 @@ border-radius: 1.5rem;
 @media only screen and (max-width: 600px) {
       
     flex-direction: column;
-    background-image: none;
     margin-left: 50%;
     transform: translateX(-30%);
     }
-
+    
+    @media only screen and (max-width: 800px) {
+      
+      flex-direction: column;
+        align-items: center;
+      }
 `
 
 export const BoxImg = styled.img`
@@ -26,9 +30,9 @@ export const BoxImg = styled.img`
     border-radius: 1.5rem;
     box-shadow: .5rem .5rem .5rem rgb(37 37 37 / 43%);
 
-    @media only screen and (max-width: 600px) {
-        width: 60vw;
+      @media only screen and (max-width: 800px) {
 
+        width: 60vw;
       }
 `
 
@@ -37,10 +41,11 @@ width: 30vw;
 padding-left: 3rem;
 border-radius: 0px 1.5rem 1.5rem 0px;
 
-@media only screen and (max-width: 600px) {
+
+      @media only screen and (max-width: 800px) {
+        padding: 1rem;
         width: 60vw;
-  
-      }
+}
 
 `
 
@@ -48,7 +53,6 @@ export const ProductTitle = styled.h2`
     text-transform: uppercase;
     color: rgb(135 46 46);
     color: #fddb3a;
-    /* color: #f6f4e6; */
     font-size: 2.4rem;
     padding: .5rem;
     margin-top: .3rem;
@@ -64,11 +68,11 @@ export const ProductDescr = styled.div`
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: #fddb3a;
-    
-        @media only screen and (max-width: 600px) {
 
-    padding: 1rem;
-          }
+
+          @media only screen and (max-width: 800px) {
+                padding: 1rem;
+}
 `
 
 export const PriceWrapper = styled.div`
@@ -79,6 +83,13 @@ export const PriceWrapper = styled.div`
     @media only screen and (max-width: 600px) {
         margin: 0;
       }
+
+      @media only screen and (max-width: 800px) {
+                display: grid;
+
+                grid-template-columns: 1fr 1fr;
+
+}
 `
 
 export const ProductPrice = styled.span`

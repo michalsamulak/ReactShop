@@ -9,6 +9,11 @@ export const Container = styled.div`
 
     @media only screen and (max-width: 600px) {
     margin: auto;
+
+    }
+
+
+    @media only screen and (max-width: 800px) {
     display: flex;
     justify-content: center;
     }
