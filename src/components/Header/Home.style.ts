@@ -4,6 +4,13 @@ import styled from "styled-components";
 export const HomeWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    @media only screen and (max-width: 600px) {
+     grid-template-columns: repeat(1, 1fr) ;
+
+     align-items: center;
+     justify-content: center;
+}
     
 `
 
@@ -25,6 +32,15 @@ export const Card = styled.div`
     margin: 1.5rem;
 
     box-shadow: 1rem 1rem 1rem #252525;
+
+    @media only screen and (max-width: 600px) {
+        width: 55rem;
+        
+        /* margin-left: auto;
+        margin-right: auto; */
+        /* width: 100vw; */
+        /* margin: 0; */
+}
 `
 
 export const Title = styled.h5`

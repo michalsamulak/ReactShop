@@ -10,6 +10,8 @@ background-image: linear-gradient(142deg, rgba(87, 131, 255, 1) 34%, rgba(83, 11
 margin-left: 50%;
 transform: translateX(-30vw);
 border-radius: 1.5rem;
+
+
 `
 
 export const BoxImg = styled.img`

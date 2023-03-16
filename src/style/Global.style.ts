@@ -5,6 +5,13 @@ export const Container = styled.div`
     margin: 2rem;
     padding: 1rem;
     margin-left: 10rem;
+
+
+    @media only screen and (max-width: 600px) {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    }
 `
 export const Error = styled.div`
 color: red;
