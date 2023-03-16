@@ -11,6 +11,13 @@ margin-left: 50%;
 transform: translateX(-30vw);
 border-radius: 1.5rem;
 
+@media only screen and (max-width: 600px) {
+      
+    flex-direction: column;
+    background-image: none;
+    margin-left: 50%;
+    transform: translateX(-30%);
+    }
 
 `
 
@@ -18,12 +25,22 @@ export const BoxImg = styled.img`
     width: 30vw;
     border-radius: 1.5rem;
     box-shadow: .5rem .5rem .5rem rgb(37 37 37 / 43%);
+
+    @media only screen and (max-width: 600px) {
+        width: 60vw;
+
+      }
 `
 
 export const Details = styled.div`
 width: 30vw;
 padding-left: 3rem;
 border-radius: 0px 1.5rem 1.5rem 0px;
+
+@media only screen and (max-width: 600px) {
+        width: 60vw;
+  
+      }
 
 `
 
@@ -35,25 +52,33 @@ export const ProductTitle = styled.h2`
     font-size: 2.4rem;
     padding: .5rem;
     margin-top: .3rem;
-`
+    `
 
 
 export const ProductDescr = styled.div`
     /* padding: 1.5rem; */
     
-     padding-top: 5rem;
-     padding-bottom: 1rem;
-     padding: 5rem 2rem 1rem 1rem;
-     margin-top: 1rem;
-     margin-bottom: 1rem;
-     color: rgb(84 10 10);
-     color: #fddb3a;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    padding: 5rem 2rem 1rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #fddb3a;
+    
+        @media only screen and (max-width: 600px) {
+
+    padding: 1rem;
+          }
 `
 
 export const PriceWrapper = styled.div`
     display: flex;
     margin-top: 25rem;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+        margin: 0;
+      }
 `
 
 export const ProductPrice = styled.span`
@@ -63,6 +88,11 @@ export const ProductPrice = styled.span`
     padding: 1.5rem;
     margin-right: 3rem;
     color: #fddb3a;
+
+    @media only screen and (max-width: 600px) {
+        margin: 0;
+        padding-right: .5rem;
+      }
 `
 
 export const ProductRate = styled.div`
@@ -72,4 +102,9 @@ export const ProductRate = styled.div`
     padding: 1.5rem;
     margin-right: 3rem;
     color: #fddb3a;
+
+    @media only screen and (max-width: 600px) {
+        margin: 0;
+        padding-right: .5rem;
+      }
 `
