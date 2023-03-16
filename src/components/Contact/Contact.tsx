@@ -1,7 +1,8 @@
 import { Field, Formik } from 'formik';
 import { ContactForm, InputWrapper, Label, SubmitBtn } from './Contact.style';
 import { schema } from "../../utils/validation";
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export const Contact = () => {
 
@@ -17,7 +18,10 @@ export const Contact = () => {
 
   return (
     <>
+    <HelmetProvider>
+
       <Helmet title="Contact | React Shop"/>
+    </HelmetProvider>
     <Formik
     initialValues={initialValues}
     

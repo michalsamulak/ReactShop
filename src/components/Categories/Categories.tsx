@@ -4,8 +4,8 @@ import { CategoriesContainer, CategoriesWrapper } from './Categories.style'
 import { Error } from "../../style/Global.style";
 import { HomeWrapper } from '../Header/Home.style';
 import { apiPaths } from '../../utils/utils';
-import { Helmet } from 'react-helmet';
-
+// import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 export const Categories = () => {
 
   const { data, loading, error } = useFetchOnInit<string[]>(
@@ -39,7 +39,10 @@ if (!loading && data === null) {
 
   return (
     <>
+    <HelmetProvider>
+
        <Helmet title="Categories | React Shop"/>
+    </HelmetProvider>
       {data?.map(categorie => {
         return (
           <CategoriesContainer key={categorie}>

@@ -8,8 +8,8 @@ import { Button } from "../Header/Home.style";
 import { useCart } from "../../context/ShopContext";
 import { Toaster } from "react-hot-toast";
 import { notify } from "../../utils/utils";
-import { Helmet } from "react-helmet";
-
+// import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 export const Product = () => {
     const { productId } = useParams();
     const { data, loading, error } = useFetchOnInit<ISingleProduct>(`${apiPaths.products}/${productId}`); 
@@ -35,7 +35,10 @@ export const Product = () => {
 
     return (
         <>
+        <HelmetProvider>
+
            <Helmet title="Product card | React Shop"/>
+        </HelmetProvider>
             {data === null || loading ? (
                 <span className="loader"></span>
             ) : (

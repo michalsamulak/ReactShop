@@ -7,15 +7,19 @@ import { Product } from "./components/Product/Product";
 import { Container } from "./style/Global.style";
 import { ShopProvider } from "./context/ShopContext";
 import { Cart } from "./components/Cart/Cart";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function App() {
     return (
         <ShopProvider>
+            <HelmetProvider>
+
                     <Helmet>
                     <title>React Shop</title>
                     <meta name="ReactShop" content="React e commerce application" />
                 </Helmet>
+            </HelmetProvider>
 
             <Navigation />
             <Container>

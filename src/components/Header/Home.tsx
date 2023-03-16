@@ -4,8 +4,8 @@ import { Error } from "../../style/Global.style";
 import { HomeWrapper } from "./Home.style";
 import { IProductsArray, ISingleProduct } from "../../types";
 import { apiPaths } from "../../utils/utils";
-import { Helmet } from "react-helmet";
-
+// import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 export const Home = () => {
@@ -40,7 +40,10 @@ export const Home = () => {
     return (
         <HomeWrapper>
             <>
+            <HelmetProvider>
+
             <Helmet title="Home | React Shop"/>
+            </HelmetProvider>
                 {data?.map((product: ISingleProduct) => {
                     return <SingleItem key={product.id} product={product} />;
                 })}
