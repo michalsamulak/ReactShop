@@ -6,15 +6,15 @@ export const CategoriesContainer = styled.div`
 
     justify-content: space-between;
     color: #252525;
-    margin: 10px;
+    margin: 1rem;
 `
 
 
 
 export const CategoriesWrapper = styled.div`
-    padding: 15px;
+    padding: 1.5rem;
     background-color: #dddbdb;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: .5rem;
 `

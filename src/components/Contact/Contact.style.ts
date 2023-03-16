@@ -7,10 +7,10 @@ export const Label = styled.label`
 `
 
 export const SubmitBtn = styled(ButtonGlobal)`
-width: 150px;
+width: 15rem;
 margin-left: 50%;
 transform: translateX(-50%);
-font-size: 24px;
+font-size: 2.4rem;
 
 `
 export const ContactForm = styled(Form)`
@@ -18,41 +18,41 @@ export const ContactForm = styled(Form)`
 font-family: 'Montserrat', Arial, sans-serif;
 background: #F2F3EB;
 
-   border: solid 3px #474544;
-   max-width: 768px;
-   margin: 60px auto;
+   border: solid .3rem #474544;
+   max-width: 76.8rem;
+   margin: 6rem auto;
     position: relative;
-    padding: 40px;
+    padding: 4rem;
 
  & h1 {
    color: #474544;
-   font-size: 32px;
+   font-size: 3.2rem;
    font-weight: 700;
-   letter-spacing: 7px;
+   letter-spacing: .7rem;
    text-align: center;
    text-transform: uppercase;
-   margin-bottom: 15px;
+   margin-bottom: 1.5rem;
  }
 
  & .underline {
-  border-bottom: solid 2px #474544;
+  border-bottom: solid .2rem #474544;
   margin: -0.512em auto;
-  width: 80px;
+  width: 8rem;
 
 }
 
 
 &  textarea {
  	line-height: 150%;
- 	height: 150px;
+ 	height: 15rem;
  	resize: none;
     width: 100%;
  }
 `
 
 export const InputWrapper = styled.div`
-   padding: 10px;
-   margin: 20px 0;
+   padding: 1rem;
+   margin: 2rem 0;
 
 
   & .number {
@@ -66,11 +66,11 @@ export const InputWrapper = styled.div`
 & input[type='text'], [type='email'], select, textarea {
 	background: none;
   border: none;
-	border-bottom: solid 2px #474544;
+	border-bottom: solid .2rem #474544;
 	color: #474544;
 	font-size: 1.000em;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
 	margin: 0em 0 1.875em 0;
 	padding: 0 0 0.875em 0;
   text-transform: uppercase;

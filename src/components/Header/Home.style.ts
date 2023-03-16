@@ -17,36 +17,36 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
 
-    border-radius: 5px;
+    border-radius: .5rem;
 
 
-    width: 250px;
-    height: 500px;
-    margin: 15px;
+    width: 25rem;
+    height: 50rem;
+    margin: 1.5rem;
 
-    box-shadow: 10px 10px 10px #252525;
+    box-shadow: 1rem 1rem 1rem #252525;
 `
 
 export const Title = styled.h5`
     text-transform: uppercase;
     color: #252525;
-    font-size: 16px;
-    padding: 5px;
-    border-bottom: 1px solid #252525;
+    font-size: 1.6rem;
+    padding: .5rem;
+    border-bottom: .1rem solid #252525;
 `
 
 export const Description = styled.span`
-    padding: 15px;
+    padding: 1.5rem;
     overflow: hidden;
      text-overflow: ellipsis;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     margin-top: 10px;
-     margin-bottom: 10px;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     margin-top: 1rem;
+     margin-bottom: 1rem;
 `
 
 export const Value = styled.div`
-    border-top: 1px solid #252525;
+    border-top: .1rem solid #252525;
     display: flex;
 
     align-items: center;
@@ -55,9 +55,9 @@ export const Value = styled.div`
 export const Price = styled.span`
     text-transform: uppercase;
     color: #252525;
-    font-size: 26px;
-    padding: 15px;
-    margin-right: 30px;
+    font-size: 2.6rem;
+    padding: 1.5rem;
+    margin-right: 3rem;
 `
 
 export const Button = styled.button`
@@ -65,9 +65,9 @@ export const Button = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6px 14px;
+  padding: .6rem 1.4rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-  border-radius: 6px;
+  border-radius: .6rem;
   border: none;
   cursor: pointer;
 
@@ -87,7 +87,7 @@ export const Button = styled.button`
 
 export const Picture = styled.img`
         width: 90%;
-        min-height: 200px;
-    max-height: 300px;
-    margin: 5px;
+        min-height: 20rem;
+    max-height: 30rem;
+    margin: .5rem;
 `

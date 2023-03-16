@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-    margin: 20px;
-    padding: 10px;
-    margin-left: 100px;
+    margin: 2rem;
+    padding: 1rem;
+    margin-left: 10rem;
 `
 export const Error = styled.div`
 color: red;
-font-size: 36px;
+font-size: 3.6rem;
 font-weight: bold;
 `
 
@@ -17,9 +17,9 @@ export const ButtonGlobal = styled.button`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 6px 14px;
+padding: .6rem 1.4rem;
 font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-border-radius: 6px;
+border-radius: .6rem;
 border: none;
 cursor: pointer;
 

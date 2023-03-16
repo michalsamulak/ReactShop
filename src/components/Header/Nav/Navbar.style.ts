@@ -16,7 +16,7 @@ export const Navbar = styled.div`
   text-transform: uppercase;
   font-weight: 500;
   width: 100vw;
-  height: 80px;
+  height: 8rem;
 
 
   & a:hover {
