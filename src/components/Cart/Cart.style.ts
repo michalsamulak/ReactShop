@@ -8,6 +8,11 @@ export const CartContainer = styled.div`
     min-height: 80vh;
     justify-content: space-between;
     color: #252525;
+
+    @media only screen and (max-width: 600px) {
+        padding: 5px;
+        width: 100%;
+    }
     `
 
 export const CartProductWrapper = styled.div`
@@ -17,6 +22,12 @@ export const CartProductWrapper = styled.div`
     align-items: center;
     border-radius: .5rem;
     margin-bottom: .1rem;
+    
+    @media only screen and (max-width: 600px) {
+        padding: 1rem;
+        margin-bottom: .5rem;
+        
+    }
 
 `
 
@@ -27,6 +38,8 @@ export const CartProductBox = styled.div`
     align-content: space-between;
     margin-left: 1.5rem;
     margin-right: 3rem;
+
+
 `
 
 
@@ -35,6 +48,8 @@ export const CartProductImg = styled.img`
     width: 8rem;
     margin-left: 1.5rem;
     border-radius: .5rem;
+
+    
 `
 
 export const CartProductBtn = styled(ButtonGlobal)`
@@ -55,6 +70,11 @@ export const CartProductDescriptions = styled.div`
     width: 40vw;
     margin-top: 1rem;
     color: rgb(37 37 37 / 78%);
+
+    @media only screen and (max-width: 600px) {
+      width: auto;
+
+    }
 `
 
 
@@ -65,6 +85,12 @@ export const CartQtyActions = styled.div`
     margin: 1.5rem;
     justify-content: space-around;
     align-self: end;
+
+    @media only screen and (max-width: 600px) {
+        align-self: start;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 `
 export const BtnRemove = styled.div`
     color: red;
