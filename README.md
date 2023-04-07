@@ -27,7 +27,7 @@ Use command git clone https://github.com/michalsamulak/ReactShop.git
 Use `npm install` command to get all required dependencies.
 ```
 
- 
+  
 
 
 I hope you enjoy this app
