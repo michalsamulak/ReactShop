@@ -4,15 +4,15 @@ import { schema } from "../../utils/validation";
 // import { Helmet } from 'react-helmet';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
+const initialValues = {
+  name: "",
+  surname: "",
+  email: "",
+  number: "",
+  message: ""
+};
 export const Contact = () => {
 
-  const initialValues = {
-    name: "",
-    surname: "",
-    email: "",
-    number: "",
-    message: ""
-};
 
 
 
